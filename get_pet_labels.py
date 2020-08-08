@@ -112,15 +112,15 @@ def get_pet_labels(image_dir):
       if len(pet_label) == 2:
         #print(pet_label[0])
         pet_label_01 = pet_label[0]
-        list_pet_labels.append(pet_label_01)
+        list_pet_labels.append([pet_label_01.lower()])
       elif len(pet_label) == 3:
         #print(" ".join(pet_label[0:2]))
         pet_label_01 = " ".join(pet_label[0:2])
-        list_pet_labels.append(pet_label_01)
+        list_pet_labels.append([pet_label_01.lower()])
       elif len(pet_label) == 4:
         #print(" ".join(pet_label[0:3]))
         pet_label_01 = " ".join(pet_label[0:3])
-        list_pet_labels.append(pet_label_01)
+        list_pet_labels.append([pet_label_01.lower()])
   results_dic = dict()
   items_in_dic = len(results_dic)
   
