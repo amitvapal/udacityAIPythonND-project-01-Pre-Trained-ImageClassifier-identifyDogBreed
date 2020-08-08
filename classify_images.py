@@ -94,7 +94,7 @@ def classify_images(images_dir, results_dic, model):
             
       # defines truth as pet image label 
       truth = results_dic[key][0]
-      found = model_label.find(truth)
+      
 
       # TODO: 3c. REPLACE pass BELOW with CODE that uses the extend list function
       #           to add the classifier label (model_label) and the value of

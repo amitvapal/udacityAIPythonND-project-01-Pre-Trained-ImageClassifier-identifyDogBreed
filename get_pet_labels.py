@@ -101,7 +101,7 @@ def get_pet_labels(image_dir):
 
 def get_pet_labels(image_dir):
   in_files = listdir(image_dir)
-  print(len(in_files))
+  #print(len(in_files))
 
   list_pet_labels = []
 
@@ -123,12 +123,13 @@ def get_pet_labels(image_dir):
         list_pet_labels.append(pet_label_01)
   results_dic = dict()
   items_in_dic = len(results_dic)
-  print("\nEmpty Dictionary results_dic - n items=", items_in_dic)
+  
+  #print("\nEmpty Dictionary results_dic - n items=", items_in_dic)
 
   # Add new key-value pairs to dictionary ONLY when key doesn't already exist. This dictionary's a list that contains only on item - the pet image label.
 
-  print(len(in_files))
-  print(len(list_pet_labels))
+  #print(len(in_files))
+  #print(len(list_pet_labels))
 
   for idx in range(0, len(in_files)):
     if in_files[idx] not in results_dic:
