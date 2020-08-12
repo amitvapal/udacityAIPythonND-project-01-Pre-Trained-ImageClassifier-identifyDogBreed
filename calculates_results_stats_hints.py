@@ -69,7 +69,8 @@ def calculates_results_stats(results_dic):
                      and the value is the statistic's value. See comments above
                      and the classroom Item XX Calculating Results for details
                      on how to calculate the counts and statistics.
-    """        
+    """
+    #print(results_dic)        
     # Creates empty dictionary for results_stats_dic
     results_stats_dic = dict()
     
@@ -99,7 +100,7 @@ def calculates_results_stats(results_dic):
         #           representing the number of correctly classified dog breeds.
         #           
         # Pet Image Label is a Dog AND Labels match- counts Correct Breed
-        pass
+        if results_dic[key][1] and results_dic[key[]]
         
         # Pet Image Label is a Dog - counts number of dog images
         if results_dic[key][3] == 1:
@@ -178,4 +179,4 @@ def calculates_results_stats(results_dic):
         
     # TODO 5f. REPLACE None with the results_stats_dic dictionary that you 
     # created with this function 
-    return None
+    return results_stats_dic

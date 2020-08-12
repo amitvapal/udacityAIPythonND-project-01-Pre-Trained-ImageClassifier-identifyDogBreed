@@ -75,11 +75,11 @@ def print_results(results_dic, results_stats_dic, model,
     #          that's accessed by key 'n_notdogs_img' using dictionary 
     #          results_stats_dic
     #
-    print("")
+    print("The number of N Not-Dog Images is {}".format(results_stats_dic["n_notdogs_img"]))
 
 
     # Prints summary statistics (percentages) on Model Run
-    print(" ")
+    print("Percent of correct dogs {}%. Percent of correct breed of dog {}%. Percent not-a-dog image {}%".format(results_stats_dic['pct_correct_dogs'], results_stats_dic["pct_correct_breed"],results_stats_dic["pct_correct_notdogs"] ))
     for key in results_stats_dic:
         # TODO: 6b. REPLACE pass with CODE that prints out all the percentages 
         #           in the results_stats_dic dictionary. Recall that all 
@@ -90,8 +90,8 @@ def print_results(results_dic, results_stats_dic, model,
         #           both the key and the value. Remember the value is accessed 
         #           by results_stats_dic[key]
         #
-        pass 
-
+        if key[0] == "p":
+                print("KEY-> {} : VALUE-> {}".format(key, results_stats_dic[key]))
 
     # IF print_incorrect_dogs == True AND there were images incorrectly 
     # classified as dogs or vice versa - print out these cases
@@ -122,7 +122,10 @@ def print_results(results_dic, results_stats_dic, model,
             #
             # Pet Image Label is a Dog - Classified as NOT-A-DOG -OR- 
             # Pet Image Label is NOT-a-Dog - Classified as a-DOG
-            pass
+            for key in results_dic:
+                    if sum(results_dic[key][3:]) == 2 and results_dic[key][2]==0:
+                            print("Real: {:>26}   Classifier: {:>30}".format(results_dic[key][0],
+                                                          results_dic[key][1]))
 
     # IF print_incorrect_breed == True AND there were dogs whose breeds 
     # were incorrectly classified - print out these cases                    

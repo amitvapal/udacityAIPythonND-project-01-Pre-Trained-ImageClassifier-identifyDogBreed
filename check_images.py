@@ -89,7 +89,7 @@ def main():
     # Adjusts the results dictionary to determine if classifier correctly 
     # classified images as 'a dog' or 'not a dog'. This demonstrates if 
     # model can correctly classify dog images as dogs (regardless of breed)
-    adjust_results4_isadog(results, None)
+    adjust_results4_isadog(results, in_arg.dogfile)
 
     # Function that checks Results Dictionary for is-a-dog adjustment using results
     check_classifying_labels_as_dogs(results)
@@ -114,7 +114,7 @@ def main():
     #      print_results(results, results_stats, in_arg.arch, True, True)
     # Prints summary results, incorrect classifications of dogs (if requested)
     # and incorrectly classified breeds (if requested)
-    print_results(results, results_stats, None, True, True)
+    print_results(results, results_stats, in_arg.arch, True, True)
     
     # TODO 0: Measure total program runtime by collecting end time
     sleep(3)
